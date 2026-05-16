@@ -1,7 +1,3 @@
-package repository;
-
-public interface AlunoRepository
-
 package com.example.cadastroalunos.repository;
 
 import com.example.cadastroalunos.model.Aluno;

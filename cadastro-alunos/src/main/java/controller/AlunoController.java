@@ -1,8 +1,3 @@
-package controller;
-
-public class AlunoController {
-}
-
 package com.example.cadastroalunos.controller;
 
 import com.example.cadastroalunos.model.Aluno;
@@ -10,7 +5,7 @@ import com.example.cadastroalunos.repository.AlunoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-        import java.util.List;
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -45,7 +40,9 @@ public class AlunoController {
         aluno.setMatricula(alunoAtualizado.getMatricula());
         aluno.setEmail(alunoAtualizado.getEmail());
         aluno.setCurso(alunoAtualizado.getCurso());
-        aluno.setAnoIngresso(alunoAtualizado.getAnoIngresso());
+        aluno.setTelefone(alunoAtualizado.getTelefone());
+        aluno.setEndereco(alunoAtualizado.getEndereco());
+        aluno.setDataMatricula(alunoAtualizado.getDataMatricula());
 
         return repository.save(aluno);
     }

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Alunos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Cadastro de Alunos</h1>
+
+<form id="form-aluno">
+    <input type="hidden" id="aluno-id">
+    <input type="text" id="nome" placeholder="Nome completo" required>
+    <input type="text" id="matricula" placeholder="Matrícula" required>
+    <input type="email" id="email" placeholder="E-mail" required>
+    <select id="curso" required>
+        <option value="">Selecione um curso...</option>
+        <option value="Engenharia de Software">Engenharia de Software</option>
+        <option value="Ciência da Computação">Ciência da Computação</option>
+        <option value="Sistemas de Informação">Sistemas de Informação</option>
+        <option value="Análise e Desenvolvimento de Sistemas">Análise e Desenvolvimento de Sistemas</option>
+        <option value="Redes de Computadores">Redes de Computadores</option>
+        <option value="Inteligência Artificial">Inteligência Artificial</option>
+        <option value="Banco de Dados">Banco de Dados</option>
+    </select>
+    <input type="text" id="telefone" placeholder="(11) 91234-5678" maxlength="15" required>
+    <input type="text" id="endereco" placeholder="Endereço" required>
+    <label for="dataMatricula">Data da matrícula:</label>
+    <input type="date" id="dataMatricula" required>
+    <div style="grid-column: span 2; display: flex; gap: 10px;">
+        <button type="submit">Salvar</button>
+        <button type="button" id="cancelar" style="display:none;">Cancelar</button>
+    </div>
+</form>
+
+<table>
+    <thead>
+    <tr>
+        <th>Nome</th>
+        <th>Matrícula</th>
+        <th>E-mail</th>
+        <th>Curso</th>
+        <th>Telefone</th>
+        <th>Endereço</th>
+        <th>Data Matrícula</th>
+        <th>Ações</th>
+    </tr>
+    </thead>
+    <tbody id="tabela-alunos"></tbody>
+</table>
+
+<script src="script.js"></script>
+</body>
+</html>

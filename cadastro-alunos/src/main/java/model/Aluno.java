@@ -1,11 +1,7 @@
-package model;
-
-public class Aluno {
-}
-
 package com.example.cadastroalunos.model;
 
 import jakarta.persistence.*;
+import java.time.LocalDate;
 
 @Entity
 public class Aluno {
@@ -18,15 +14,14 @@ public class Aluno {
     private String matricula;
     private String email;
     private String curso;
-    private Integer anoIngresso;
+    private String telefone;
+    private String endereco;
+    private LocalDate dataMatricula;
 
     public Aluno() {
     }
 
-    public Long getId() {
-        return id;
-    }
-
+    // Getters e Setters
     public Long getId() {
         return id;
     }
@@ -67,11 +62,27 @@ public class Aluno {
         this.curso = curso;
     }
 
-    public Integer getAnoIngresso() {
-        return anoIngresso;
+    public String getTelefone() {
+        return telefone;
     }
 
-    public void setAnoIngresso(Integer anoIngresso) {
-        this.anoIngresso = anoIngresso;
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+
+    public String getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
+    }
+
+    public LocalDate getDataMatricula() {
+        return dataMatricula;
+    }
+
+    public void setDataMatricula(LocalDate dataMatricula) {
+        this.dataMatricula = dataMatricula;
     }
 }
